@@ -4,4 +4,15 @@ block content
   h1= title
   p Welcome to #{title}
   p welcome to Bhavya Tatavarthi's page 
-  button.btn.btn-outline-success(type="button") Press Me
+  button.btn.btn-outline-success(type="button", onclick="goFaster()") Press Me
+  div#faster Increase the Speed.
+  script.
+    var mph = 20;
+    var change = 1;
+ 
+    function goFaster() {
+      mph += change;
+      change += 1;
+      var div = document.getElementById("faster");
+      div.innerText = "MPH " + mph + " with change " + change;
+    }
