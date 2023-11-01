@@ -2,23 +2,7 @@ extends layout
 
 block content
   h1= title
-  p Query rows: #{query.rows}, Query cols: #{query.cols}
+  p rows: #{query.rows}
+  p cols: #{query.cols}
  
-  - let rows = Number(query.rows)
-  - let cols = Number(query.cols)
- 
-  - if (!Number.isInteger(rows) || !Number.isInteger(cols) || rows < 1 || rows > 10 || cols < 1 || cols > 10)
-    p Invalid rows or cols input.
-  - else if (rows < 1 || rows > 10)
-    p Rows out of range (1-10).
-  - else if (cols < 1 || cols > 10)
-    p Cols out of range (1-10).
-  - else
-    table#outer
-      - for let i = 0; i < rows; i++
-        tr#middle
-          - for let j = 0; j < cols; j++
-            td= computeCellValue(i, j, rows, cols)
- 
-script(src='board.js')
   
