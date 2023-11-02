@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   console.log(`rows:${query.rows}`)
   console.log(`cols:${query.cols}`)
 
-  res.render('board', { title: 'Board Display',query:query });
+  res.render('board', { title: 'Board Display',query:query })
 });
 
 module.exports = router;

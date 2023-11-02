@@ -5,8 +5,12 @@ block content
   .container-fluid
     .row
       - let results = [{ Name : 'Humming Bird', color : 'Green', Age : 2 },{ Name: 'Hawk', color: 'Brown', Age: 5 },{ Name: 'Wren', color: 'white', Age: 10 }]
-      each item in results
-        .col-sm-2
+      each item, index in results
+        .col-sm-2(onclick=`buy(${index})`)
           p Name: #{item.Name}
           p color: #{item.color}
           p Age: #{item.Age}
+  script.
+    function buy(index) {
+      alert(`You purchased item ${index}`);
+    }
