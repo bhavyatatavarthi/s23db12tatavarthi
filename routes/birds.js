@@ -1,9 +1,6 @@
 var express = require('express');
+const birds_controllers= require('../controllers/birds');
 var router = express.Router();
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('birds', { title: 'Search Results' });
-});
-
+/* GET costumes */
+router.get('/', birds_controllers.birds_view_all_Page);
 module.exports = router;
