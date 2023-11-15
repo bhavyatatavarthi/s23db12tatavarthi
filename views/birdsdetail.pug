@@ -1,20 +1,23 @@
 extends layout
 block content
  h1= title
- - let birdsid = toShow._id
- - let birds_Name = toShow.Name
- - let birdscolor = toShow.color
- - let birdsAge = toShow.Age
- div
-  div.row
-   div(class='birdsAttr mr-3') birds ID is:
-   div #{birdsid}
-  div.row
-   div(class='birdsAttr mr-3') Birds name is:
-   div #{birds_Name}
-  div.row
-   div(class='birdsAttr mr-3') Birds color is:
-   div #{birdscolor}
-  div.row
-   div(class='birdsAttr mr-3') Birds Age is:
-   div #{birdsAge}
+ if (toShow == null)
+  h2 No instance to detail
+ else
+  - let birdsid = toShow._id
+  - let birds_Name = toShow.Name
+  - let birdscolor = toShow.color
+  - let birdsAge = toShow.Age
+  div
+   div.row
+    div(class='birdsAttr mr-3') birds ID is:
+    div #{birdsid}
+   div.row
+    div(class='birdsAttr mr-3') Birds name is:
+    div #{birds_Name}
+   div.row
+    div(class='birdsAttr mr-3') Birds color is:
+    div #{birdscolor}
+   div.row
+    div(class='birdsAttr mr-3') Birds Age is:
+    div #{birdsAge}

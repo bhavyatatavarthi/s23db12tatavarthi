@@ -5,26 +5,26 @@ block content
   h2 No instance to delete
  else
   - let birdsid = toShow.id
-  - let birdsname = toShow.Name
-  - let birdscolor = toShow.color
-  - let birdsage = toShow.Age
+  - let Name = toShow.Name
+  - let color = toShow.color
+  - let Age = toShow.Age
   - let actionid = "/resource/birds/" + birdsid
- script let actionid = "#{actionid}"
- div
-  div.row
-   div(class='birdsAttr mr-3') Birds ID is:
-   div #{birdsid}
-  div.row
-   div(class='birdsAttr mr-3') Birds Name is:
-   div #{birdsname}
-  div.row
-   div(class='birdsAttr mr-3') Birds color is:
-   div #{birdscolor}
-  div.row
-   div(class='birdsAttr mr-3') Birds Age is:
-   div #{birdsag}
- button(class="btn btn-danger m-2" onclick="deleteOnid()") Delete
- button(class="btn btn-secondary m-2" onclick="cancel()") Cancel
+  script let actionid = "#{actionid}"
+  div
+   div.row
+    div(class='birdsAttr mr-3') Birds ID is:
+    div #{birdsid}
+   div.row
+    div(class='birdsAttr mr-3') Birds Name is:
+    div #{Name}
+   div.row
+    div(class='birdsAttr mr-3') Birds color is:
+    div #{color}
+   div.row
+    div(class='birdsAttr mr-3') Birds Age is:
+    div #{Age}
+  button(class="btn btn-danger m-2" onclick="deleteOnid()") Delete
+  button(class="btn btn-secondary m-2" onclick="cancel()") Cancel
 
  script.
   function cancel() {
